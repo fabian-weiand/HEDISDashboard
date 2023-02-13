@@ -1,0 +1,21 @@
+{% extends "measure/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <h2 class="mr-2">{{ object.acronym }}</h2>
+            <small class="text-muted">{{ object.title }}</small>
+        </div>
+        <b>Description:</b><p class="article-content">{{object.description}}</p>
+        <hr class="mt-2 mb-3"/>
+        <b>Initial Population:</b><p class="article-content">{{object.population}}</p>
+        <hr class="mt-2 mb-3"/>
+        <b>Exclusions:</b><p class="article-content">{{object.exclusions}}</p>
+        <hr class="mt-2 mb-3"/>
+        <b>Denominator:</b><p class="article-content">{{object.denominator}}</p>
+        <hr class="mt-2 mb-3"/>
+        <b>Numerator:</b><p class="article-content">{{object.numerator}}</p>
+
+        </div>
+    </article>
+{% endblock content %}

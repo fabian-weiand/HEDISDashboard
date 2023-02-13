@@ -1,0 +1,14 @@
+{% extends "measure/base.html" %}
+{% block content %}
+{% for measure in measures %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <h2><a class="mr-2" class="article-title" href="{% url 'measure-detail' measure.pk %}">{{ measure.acronym }}</a></h2>
+                <small class="text-muted">{{ measure.title }}</small>
+            </div>
+            <b>Description:</b><p class="article-content">{{measure.description}}</p>
+        </div>
+    </article>
+{% endfor %}
+{% endblock content %}
